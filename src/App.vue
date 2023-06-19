@@ -3,18 +3,18 @@ import Start from './components/Start.vue'
 </script>
 
 <template>
-  <div>
+  
     <a href="/">
       <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" />
     </a>
-  </div>
+  
   <Start msg="Vite + Vue" />
 </template>
 
 <style scoped>
 .logo {
-  height: 3em;
-  padding: 1em;
+  height: 2.5em;
+  padding: em;
   will-change: filter;
   transition: filter 300ms;
   position: absolute;
@@ -22,6 +22,6 @@ import Start from './components/Start.vue'
   left: 2em;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 1em #4ca9fbaa);
+  filter: drop-shadow(0 0 1em #1c03fe);
 }
 </style>
