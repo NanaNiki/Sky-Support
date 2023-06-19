@@ -3,11 +3,9 @@ import Start from './components/Start.vue'
 </script>
 
 <template>
-  
     <a href="/">
       <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" />
     </a>
-  
   <Start msg="Vite + Vue" />
 </template>
 
