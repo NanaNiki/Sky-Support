@@ -1,25 +1,20 @@
 <script setup>
+import { ref } from 'vue';
 import Start from './components/Start.vue'
+import Sky from './components/Sky.vue';
+
+const showSkyComponent = ref(false);
+provide('showSkyComponent', showSkyComponent);
 </script>
 
 <template>
-    <a href="/">
-      <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" />
-    </a>
-  <Start msg="Vite + Vue" />
+  <div v-if="!showSkyComponent">
+    <Start />
+  </div>
+  <div v-if="showSkyComponent">
+    <Sky/>
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 2.5em;
-  padding: em;
-  will-change: filter;
-  transition: filter 300ms;
-  position: absolute;
-  top: 1em;
-  left: 2em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 1em #1c03fe);
-}
+<style src="./style.css">
 </style>

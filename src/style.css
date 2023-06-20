@@ -85,3 +85,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.logo{
+  height: 2.5em;
+  padding: em;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1em #1c03fe);
+}

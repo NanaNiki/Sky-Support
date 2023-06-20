@@ -1,14 +1,33 @@
 <script setup>
-import { ref } from 'vue'
+import RandomSkyButton from './RandomSkyButton.vue';
+import NearMeButton from './NearMeButton.vue';
+import { ref, inject } from 'vue';
 
-defineProps({
-  msg: String,
-})
+const accessKeyImg = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
+const locationInput = ref('');
+const showSkyComponent = inject('showSkyComponent');
 
-const count = ref(0)
+
+const fetchSkyfromInput = () => {
+  const query = `sky-${locationInput}`;
+  fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKeyImg}`)
+    .then(response => response.json())
+    .then(photoData => {
+        const randomIndex = Math.floor(Math.random() * photoData.results.length);
+        const randomPhoto = photoData.results[randomIndex];
+        const imageUrlFromInput = randomPhoto.urls.regular;
+        showSkyComponent.value = true
+    })
+    .catch(error => {
+        console.error("Failed to fetch image:", error);
+    })
+}
 </script>
-
+//enter button = fetchSkyfromInput & save choice
 <template>
+  <a href="/">
+      <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" />
+  </a>
   <div class="bg-container"></div>
   <img src="/cloud.svg" class="cloud1" alt="cloud" />
   <img src="/cloud.svg" class="cloud2" alt="cloud" />
@@ -18,10 +37,10 @@ const count = ref(0)
   <h3>Space where you can get inspiration and enhance your focus</h3>
   <h3>Choose your sky:</h3>
   <div class="input-buttons-wrapper"> 
-  <input placeholder="Type in location of your dream sky"/>
+  <input v-model="locationInput" placeholder="Type in location of your dream sky"/>
   <div class="button-wrapper">  
-  <button>Random sky</button>
-  <button>Sky near me</button>
+    <RandomSkyButton />
+    <NearMeButton />
 </div>
 </div>
 </section>
