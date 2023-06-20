@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { config } from 'dotenv'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-  define: {
-    'process.env': {
-      VITE_UNSPLASH_ACCESS_KEY: JSON.stringify(process.env.VITE_UNSPLASH_ACCESS_KEY),
+export default defineConfig(({ mode }) => {
+  const envConfig = config({ path: `.env.${mode}` }).parsed
+
+  return {
+    plugins: [vue()],
+    define: {
+      'process.env': JSON.stringify(envConfig),
     },
-  },
+  }
 })
