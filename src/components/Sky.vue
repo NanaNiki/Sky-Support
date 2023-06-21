@@ -16,10 +16,9 @@ const fetchedSkyImage = inject('fetchedSkyImage');
 
 <style scoped>
 .sky-image{
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .sky {
     height: 100vh;

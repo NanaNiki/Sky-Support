@@ -5,16 +5,16 @@ import { ref, inject } from 'vue';
 
 const accessKeyImg = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const locationInput = ref('');
-
 const showSkyComponent = inject('showSkyComponent');
 const fetchedSkyImage = inject('fetchedSkyImage');
 
 const fetchSkyfromInput = () => {
-  const query = `sky-${locationInput}`;
+  const query = `sky-${locationInput.value.replace(/\s+/g, '-')}`;
+  console.log(query);
   fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKeyImg}`)
     .then(response => response.json())
     .then(photoData => {
-      fetchedSkyImage.value = photoData.urls.regular;
+      fetchedSkyImage.value = photoData.urls.full;
       showSkyComponent.value = true
     })
     .catch(error => {
@@ -22,7 +22,7 @@ const fetchSkyfromInput = () => {
     })
 }
 </script>
-//enter button = fetchSkyfromInput & save choice
+
 <template>
   <a href="/">
     <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" />
@@ -36,7 +36,7 @@ const fetchSkyfromInput = () => {
     <h3>Space where you can get inspiration and enhance your focus</h3>
     <h3>Choose your sky:</h3>
     <div class="input-buttons-wrapper">
-      <input v-model="locationInput" placeholder="Type in location of your dream sky" />
+      <input v-model="locationInput" @keydown.enter="fetchSkyfromInput" placeholder="Type in location of your dream sky" />
       <div class="button-wrapper">
         <RandomSkyButton />
         <NearMeButton />
@@ -132,4 +132,5 @@ input:hover {
   flex: auto;
   flex-direction: row;
   flex-wrap: wrap;
-}</style>
+}
+</style>

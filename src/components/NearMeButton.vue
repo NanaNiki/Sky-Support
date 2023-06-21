@@ -13,17 +13,16 @@ const fetchNearMe = () => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         //turn data into country
-        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${accessKeyLoc}`)
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&language=native&key=${accessKeyLoc}`)
           .then(response => response.json())
           .then(data => {
+            console.log(data.results[0].formatted);
             const country = data.results[0].components.country;
-            console.log(country);
-            const query = `sky-${country}`
-
+            const query = `sky-${country}-hd`
             fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKeyImg}`)
               .then(response => response.json())
               .then(photoData => {
-                fetchedSkyImage.value = photoData.urls.regular;
+                fetchedSkyImage.value = photoData.urls.full;
                 showSkyComponent.value = true
               })
               .catch(error => {
@@ -33,14 +32,15 @@ const fetchNearMe = () => {
           .catch(error => {
             console.error("Failed to retrieve country:", error);
           });
-      })
-      .catch(error => {
+      },
+      error => {
         console.error("Seems like we can't get this location:", error);
-      });
+      }
+    );
   } else {
     console.error("Geolocation is not supported bu thid browser.");
   }
-}
+};
 </script>
 
 <template>
