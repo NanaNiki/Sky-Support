@@ -2,6 +2,7 @@
 import { ref, inject } from "vue";
 import quotesData from "../data/quotesData.json";
 const fetchedSkyImage = inject('fetchedSkyImage');
+const picture = inject('picture');
 const show = ref(false);
 const quote = ref({
     text: '',
@@ -24,15 +25,17 @@ const getRandomQuote = () => {
         <div class="quotes-card" v-if="show">
             <h3 class="quote">{{ quote.text }}</h3>
             <div class="share-quote">
-                <a :href="`https://twitter.com/intent/tweet?hashtags=skysupportapp&text=${encodeURIComponent('&ldquo;' + quote.text + '&rdquo;' + '\n' + '~' + '&ensp;' + quote.author + '\n')}`"
-                    target="_blank" class="pin-icon">Twitit
-                </a>
-                <a :data-pin-do="'embedPin'"
-                    :href="`http://pinterest.com/pin/create/button?media=${encodeURIComponent(fetchedSkyImage)}&description=${encodeURIComponent('&ldquo;' + quote.text + '&rdquo;' + '\n' + '~' + '&ensp;' + quote.author)}`"
-                    className="twit-icon" count-layout="horizontal" target="_blank">
-                    Pinit
-                </a>
-                <h5 class="author">~ {{ quote.author }}</h5>
+                <div><a :href="`https://twitter.com/intent/tweet?hashtags=skysupportapp&text=${encodeURIComponent(`&ldquo;${quote.text}&rdquo;\n~&ensp;${quote.author}\n`)}`"
+                        target="_blank" class="pin-icon" aria-label="Twitt your qoute">
+                        <img src="src/assets/twitterlogo.png" class="share-logo" alt="Twitter icon" />
+                    </a>
+                    <a :data-pin-do="'embedPin'"
+                        :href="`http://pinterest.com/pin/create/button?media=${encodeURIComponent(fetchedSkyImage)}&description=${encodeURIComponent(`&ldquo;${quote.text}&rdquo;\n~ ${quote.author}\nPhoto by ${picture.authorName}.`)}`"
+                        className="twit-icon" count-layout="horizontal" target="_blank" aria-label="Pin your qoute">
+                        <img src="src/assets/pinterestlogo.png" class="share-logo" alt="Pinterest icon" />
+                    </a>
+                </div>
+                <h3 class="author">~ {{ quote.author }}</h3>
             </div>
         </div>
     </Transition>
@@ -40,11 +43,22 @@ const getRandomQuote = () => {
 
 
 <style scoped>
+.share-logo {
+    height: 2.5em;
+    margin: 0 0.25em;
+}
+
+.share-logo:hover {
+    filter: drop-shadow(0 0 0.5em #1c03fe);
+}
+
 .share-quote {
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
+    min-width: 28rem;
+    width: inherit;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .quote {
@@ -64,19 +78,16 @@ const getRandomQuote = () => {
 }
 
 .quotes-card {
-    min-height: 7.5em;
-    min-width: 30em;
-    width: fit-content;
-    height: fit-content;
+    height: 7.5em;
+   min-width: 30em;
     background-color: #0b073f;
     position: absolute;
     bottom: 1em;
     left: 6em;
-    padding: 0 2em;
-    border-radius: 10px;
+    padding: 1em 2em;
+    border-radius: 1.5em;
     border: 1px solid #646cff;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-}
-</style>
+}</style>

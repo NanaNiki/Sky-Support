@@ -7,6 +7,7 @@ const accessKeyImg = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const locationInput = ref('');
 const showSkyComponent = inject('showSkyComponent');
 const fetchedSkyImage = inject('fetchedSkyImage');
+const picture = inject('picture');
 
 const fetchSkyfromInput = () => {
   const query = `sky-${locationInput.value.replace(/\s+/g, '-')}`;
@@ -15,6 +16,9 @@ const fetchSkyfromInput = () => {
     .then(response => response.json())
     .then(photoData => {
       fetchedSkyImage.value = photoData.urls.full;
+      picture.value.authorName = photoData.user.first_name + " " + photoData.user.last_name;
+      picture.value.authorProfile = photoData.user.links.html;
+      picture.value.pictureLink = photoData.links.html;
       showSkyComponent.value = true
     })
     .catch(error => {
@@ -36,7 +40,8 @@ const fetchSkyfromInput = () => {
     <h3>Space where you can get inspiration and enhance your focus</h3>
     <h3>Choose your sky:</h3>
     <div class="input-buttons-wrapper">
-      <input v-model="locationInput" @keydown.enter="fetchSkyfromInput" placeholder="Type in location of your dream sky" />
+      <input v-model="locationInput" @keydown.enter="fetchSkyfromInput"
+        placeholder="Type in location of your dream sky" />
       <div class="button-wrapper">
         <RandomSkyButton />
         <NearMeButton />

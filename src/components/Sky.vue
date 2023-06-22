@@ -3,7 +3,7 @@ import DropDown from './DropDown.vue';
 import Quotes from './Quotes.vue';
 import { inject } from 'vue';
 const fetchedSkyImage = inject('fetchedSkyImage');
-
+const picture = inject('picture');
 </script>
 
 <template>
@@ -14,10 +14,20 @@ const fetchedSkyImage = inject('fetchedSkyImage');
         <button aria-label="Show sounds options">
             <img src="/soundsicon.svg" class="sounds-icon" alt="Sounds icon"/>
         </button>
+        <div class="pic-details">
+            <a :href="picture.pictureLink" target="_blank">Photo </a>by
+            <a :href="picture.authorProfile" target="_blank"> {{ picture.authorName  }} </a>
+            </div>
     </section>
 </template>
 
 <style scoped>
+.pic-details{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.5em;
+}
 .sky-image{
   object-fit: cover;
   width: 100%;

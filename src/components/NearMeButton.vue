@@ -5,6 +5,7 @@ const accessKeyLoc = import.meta.env.VITE_GEOCODING_ACCESS_KEY;
 
 const showSkyComponent = inject('showSkyComponent');
 const fetchedSkyImage = inject('fetchedSkyImage');
+const picture = inject('picture');
 
 const fetchNearMe = () => {
   if (navigator.geolocation) {
@@ -23,6 +24,9 @@ const fetchNearMe = () => {
               .then(response => response.json())
               .then(photoData => {
                 fetchedSkyImage.value = photoData.urls.full;
+                picture.value.authorName = photoData.user.first_name + " " + photoData.user.last_name;
+                picture.value.authorProfile = photoData.user.links.html;
+                picture.value.pictureLink = photoData.links.html;
                 showSkyComponent.value = true
               })
               .catch(error => {

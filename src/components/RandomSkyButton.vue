@@ -3,6 +3,7 @@ import { inject } from 'vue';
 const accessKeyImg = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const showSkyComponent = inject('showSkyComponent');
 const fetchedSkyImage = inject('fetchedSkyImage');
+const picture = inject('picture');
 
 
 const fetchRandomSky = () => {
@@ -10,6 +11,9 @@ const fetchRandomSky = () => {
         .then(response => response.json())
         .then(photoData => {
             fetchedSkyImage.value = photoData[0].urls.full;
+            picture.value.authorName = photoData[0].user.first_name + " " + photoData[0].user.last_name;
+            picture.value.authorProfile  = photoData[0].user.links.html;
+            picture.value.pictureLink  = photoData[0].links.html;
             showSkyComponent.value = true
         })
         .catch(error => {

@@ -1,375 +1,582 @@
 [
-    {
+  {
       "text": "The only true wisdom is in knowing you know nothing.",
       "author": "Socrates"
-    },
-    {
+  },
+  {
+      "text": "Know thyself.",
+      "author": "Socrates"
+  },
+  {
       "text": "The unexamined life is not worth living.",
       "author": "Socrates"
-    },
-    {
-      "text": "Happiness and freedom begin with a clear understanding of one principle: Some things are within our control, and some things are not.",
-      "author": "Epictetus"
-    },
-    {
-      "text": "The key is to keep company only with people who uplift you, whose presence calls forth your best.",
-      "author": "Epictetus"
-    },
-    {
-      "text": "Knowing yourself is the beginning of all wisdom.",
-      "author": "Aristotle"
-    },
-    {
-      "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-      "author": "Aristotle"
-    },
-    {
-      "text": "The mind is everything. What you think you become.",
-      "author": "Buddha"
-    },
-    {
-      "text": "Peace comes from within. Do not seek it without.",
-      "author": "Buddha"
-    },
-    {
-      "text": "All that we are is the result of what we have thought.",
-      "author": "Buddha"
-    },
-    {
-      "text": "The only way to do great work is to love what you do.",
+  },
+  {
+      "text": "True knowledge exists in knowing that you know nothing.",
       "author": "Socrates"
-    },
-    {
-      "text": "To find yourself, think for yourself.",
+  },
+  {
+      "text": "The only good is knowledge, and the only evil is ignorance.",
       "author": "Socrates"
-    },
-    {
-      "text": "The greatest wealth is to live content with little.",
-      "author": "Plato"
-    },
-    {
-      "text": "Wise men speak because they have something to say; fools because they have to say something.",
-      "author": "Plato"
-    },
-    {
-      "text": "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.",
-      "author": "Aristotle"
-    },
-    {
-      "text": "Pleasure in the job puts perfection in the work.",
-      "author": "Aristotle"
-    },
-    {
-      "text": "The only good is knowledge and the only evil is ignorance.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Change is the only constant in life.",
-      "author": "Heraclitus"
-    },
-    {
-      "text": "The measure of a man is what he does with power.",
-      "author": "Plato"
-    },
-    {
-      "text": "Wonders are many, and none is more wonderful than man.",
-      "author": "Sophocles"
-    },
-    {
+  },
+  {
       "text": "An unexamined life is not worth living.",
       "author": "Socrates"
-    },
-    {
-      "text": "Life must be understood backward. But it must be lived forward.",
-      "author": "Søren Kierkegaard"
-    },
-    {
-      "text": "I know that I am intelligent, because I know that I know nothing.",
+  },
+  {
+      "text": "To know, is to know that you know nothing. That is the meaning of true knowledge.",
       "author": "Socrates"
-    },
-    {
-      "text": "Wealth consists not in having great possessions, but in having few wants.",
-      "author": "Epictetus"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
+  },
+  {
+      "text": "Beware the barrenness of a busy life.",
       "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
+  },
+  {
+      "text": "I cannot teach anybody anything. I can only make them think.",
+      "author": "Socrates"
+  },
+  {
+      "text": "Death may be the greatest of all human blessings.",
+      "author": "Socrates"
+  },
+  {
+      "text": "The greatest wealth is to live content with little.",
       "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Wise men speak because they have something to say; fools because they have to say something.",
       "author": "Plato"
-    },
-    {
+  },
+  {
+      "text": "At the touch of love everyone becomes a poet.",
+      "author": "Plato"
+  },
+  {
+      "text": "Courage is knowing what not to fear.",
+      "author": "Plato"
+  },
+  {
       "text": "He who commits injustice is ever made more wretched than he who suffers it.",
       "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
+  },
+  {
+      "text": "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
       "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Knowledge which is acquired under compulsion obtains no hold on the mind.",
       "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
+  },
+  {
+      "text": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors.",
       "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "We are twice armed if we fight with faith.",
       "author": "Plato"
-    },
-    {
+  },
+  {
+      "text": "The measure of a man is what he does with power.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
+      "author": "Plato"
+  },
+  {
+      "text": "At the touch of love everyone becomes a poet.",
+      "author": "Plato"
+  },
+  {
       "text": "He who commits injustice is ever made more wretched than he who suffers it.",
       "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
+  },
+  {
+      "text": "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
       "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Knowledge which is acquired under compulsion obtains no hold on the mind.",
       "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
+  },
+  {
+      "text": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors.",
+      "author": "Plato"
+  },
+  {
+      "text": "We are twice armed if we fight with faith.",
+      "author": "Plato"
+  },
+  {
+      "text": "The measure of a man is what he does with power.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
+      "author": "Plato"
+  },
+  {
+      "text": "There is only one way to avoid criticism: do nothing, say nothing, and be nothing.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The energy of the mind is the essence of life.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Educating the mind without educating the heart is no education at all.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Pleasure in the job puts perfection in the work.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Happiness depends upon ourselves.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The whole is more than the sum of its parts.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Friendship is a single soul dwelling in two bodies.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The roots of education are bitter, but the fruit is sweet.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Wonders are many, and none is more wonderful than man.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "One word frees us of all the weight and pain of life: That word is love.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "Quick decisions are unsafe decisions.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "Look and you will find it—what is unsought will go undetected.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "I would prefer even to fail with honor than to win by cheating.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "A hero is born among a hundred, a wise man is found among a thousand, but an accomplished one might not be found even among a hundred thousand men.",
+      "author": "Plato"
+  },
+  {
+      "text": "The measure of a man is what he does with power.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
+      "author": "Plato"
+  },
+  {
+      "text": "There is only one way to avoid criticism: do nothing, say nothing, and be nothing.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The energy of the mind is the essence of life.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Educating the mind without educating the heart is no education at all.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Pleasure in the job puts perfection in the work.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Happiness depends upon ourselves.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The whole is more than the sum of its parts.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Friendship is a single soul dwelling in two bodies.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The roots of education are bitter, but the fruit is sweet.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Wonders are many, and none is more wonderful than man.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "One word frees us of all the weight and pain of life: That word is love.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "Quick decisions are unsafe decisions.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "Look and you will find it—what is unsought will go undetected.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "I would prefer even to fail with honor than to win by cheating.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "A hero is born among a hundred, a wise man is found among a thousand, but an accomplished one might not be found even among a hundred thousand men.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "The only true wisdom is in knowing you know nothing.",
       "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
-      "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
+  },
+  {
+      "text": "Know thyself.",
       "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "The unexamined life is not worth living.",
+      "author": "Socrates"
+  },
+  {
+      "text": "True knowledge exists in knowing that you know nothing.",
+      "author": "Socrates"
+  },
+  {
+      "text": "The only good is knowledge, and the only evil is ignorance.",
+      "author": "Socrates"
+  },
+  {
+      "text": "An unexamined life is not worth living.",
+      "author": "Socrates"
+  },
+  {
+      "text": "To know, is to know that you know nothing. That is the meaning of true knowledge.",
+      "author": "Socrates"
+  },
+  {
+      "text": "Beware the barrenness of a busy life.",
+      "author": "Socrates"
+  },
+  {
+      "text": "I cannot teach anybody anything. I can only make them think.",
+      "author": "Socrates"
+  },
+  {
+      "text": "Death may be the greatest of all human blessings.",
+      "author": "Socrates"
+  },
+  {
+      "text": "The greatest wealth is to live content with little.",
       "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
+  },
+  {
+      "text": "Wise men speak because they have something to say; fools because they have to say something.",
+      "author": "Plato"
+  },
+  {
+      "text": "At the touch of love everyone becomes a poet.",
+      "author": "Plato"
+  },
+  {
+      "text": "Courage is knowing what not to fear.",
+      "author": "Plato"
+  },
+  {
       "text": "He who commits injustice is ever made more wretched than he who suffers it.",
       "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
+  },
+  {
+      "text": "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
       "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Knowledge which is acquired under compulsion obtains no hold on the mind.",
       "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
+  },
+  {
+      "text": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors.",
       "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "We are twice armed if we fight with faith.",
       "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
+  },
+  {
+      "text": "The measure of a man is what he does with power.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
+      "author": "Plato"
+  },
+  {
+      "text": "At the touch of love everyone becomes a poet.",
+      "author": "Plato"
+  },
+  {
       "text": "He who commits injustice is ever made more wretched than he who suffers it.",
       "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
+  },
+  {
+      "text": "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
       "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Knowledge which is acquired under compulsion obtains no hold on the mind.",
       "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
+  },
+  {
+      "text": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors.",
+      "author": "Plato"
+  },
+  {
+      "text": "We are twice armed if we fight with faith.",
+      "author": "Plato"
+  },
+  {
+      "text": "The measure of a man is what he does with power.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
+      "author": "Plato"
+  },
+  {
+      "text": "There is only one way to avoid criticism: do nothing, say nothing, and be nothing.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The energy of the mind is the essence of life.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Educating the mind without educating the heart is no education at all.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Pleasure in the job puts perfection in the work.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Happiness depends upon ourselves.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The whole is more than the sum of its parts.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Friendship is a single soul dwelling in two bodies.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "The roots of education are bitter, but the fruit is sweet.",
+      "author": "Aristotle"
+  },
+  {
+      "text": "Wonders are many, and none is more wonderful than man.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "One word frees us of all the weight and pain of life: That word is love.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "Quick decisions are unsafe decisions.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "Look and you will find it—what is unsought will go undetected.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "I would prefer even to fail with honor than to win by cheating.",
+      "author": "Sophocles"
+  },
+  {
+      "text": "A hero is born among a hundred, a wise man is found among a thousand, but an accomplished one might not be found even among a hundred thousand men.",
+      "author": "Plato"
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
+      "author": "Plato"
+  },
+  {
+      "text": "Love is a serious mental disease.",
+      "author": "Plato"
+  },
+  {
+      "text": "The only true wisdom is in knowing you know nothing.",
       "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
-      "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
+  },
+  {
+      "text": "Know thyself.",
       "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "The unexamined life is not worth living.",
+      "author": "Socrates"
+  },
+  {
+      "text": "True knowledge exists in knowing that you know nothing.",
+      "author": "Socrates"
+  },
+  {
+      "text": "The only good is knowledge, and the only evil is ignorance.",
+      "author": "Socrates"
+  },
+  {
+      "text": "An unexamined life is not worth living.",
+      "author": "Socrates"
+  },
+  {
+      "text": "To know, is to know that you know nothing. That is the meaning of true knowledge.",
+      "author": "Socrates"
+  },
+  {
+      "text": "Beware the barrenness of a busy life.",
+      "author": "Socrates"
+  },
+  {
+      "text": "I cannot teach anybody anything. I can only make them think.",
+      "author": "Socrates"
+  },
+  {
+      "text": "Death may be the greatest of all human blessings.",
+      "author": "Socrates"
+  },
+  {
+      "text": "The greatest wealth is to live content with little.",
       "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
+  },
+  {
+      "text": "Wise men speak because they have something to say; fools because they have to say something.",
+      "author": "Plato"
+  },
+  {
+      "text": "At the touch of love everyone becomes a poet.",
+      "author": "Plato"
+  },
+  {
+      "text": "Courage is knowing what not to fear.",
+      "author": "Plato"
+  },
+  {
       "text": "He who commits injustice is ever made more wretched than he who suffers it.",
       "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
+  },
+  {
+      "text": "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
       "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Knowledge which is acquired under compulsion obtains no hold on the mind.",
       "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
+  },
+  {
+      "text": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors.",
       "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "We are twice armed if we fight with faith.",
       "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
-      "text": "He who commits injustice is ever made more wretched than he who suffers it.",
+  },
+  {
+      "text": "The measure of a man is what he does with power.",
       "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
+  },
+  {
+      "text": "Love is a serious mental disease.",
       "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
+  },
+  {
+      "text": "Ignorance, the root and stem of all evil.",
       "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
+  },
+  {
+      "text": "Good actions give strength to ourselves and inspire good actions in others.",
       "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
-      "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
-      "text": "He who commits injustice is ever made more wretched than he who suffers it.",
-      "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
-      "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
-      "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
-      "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
-      "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
-      "text": "He who commits injustice is ever made more wretched than he who suffers it.",
-      "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
-      "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
-      "author": "Plato"
-    },
-    {
-      "text": "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "Be kind, for everyone you meet is fighting a hard battle.",
-      "author": "Plato"
-    },
-    {
-      "text": "The only thing I know is that I know nothing.",
-      "author": "Socrates"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
-      "author": "Plato"
-    },
-    {
-      "text": "The more I learn, the more I realize how much I don't know.",
-      "author": "Albert Einstein"
-    },
-    {
-      "text": "He who commits injustice is ever made more wretched than he who suffers it.",
-      "author": "Plato"
-    },
-    {
-      "text": "The highest reach of injustice is to be deemed just when you are not.",
-      "author": "Plato"
-    },
-    {
-      "text": "He who is not a good servant will not be a good master.",
-      "author": "Plato"
-    }
-  ]
-  
+  }
+]
