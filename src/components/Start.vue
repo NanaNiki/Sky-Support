@@ -129,8 +129,9 @@ input:hover {
 }
 
 .button-wrapper {
-  flex: auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 20em;
 }
 </style>

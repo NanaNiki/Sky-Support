@@ -8,40 +8,30 @@ const showDropDown = ref(false);
 </script>
 
 <template>
-  <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" @click="showDropDown = !showDropDown" />
-  <transition name="fade" mode="in-out" appear>
-  <section class="drop-down" v-if="showDropDown">
-    <div class="link-wrapper"><a href="/" class="home-link">Home</a></div>
-    <CloudsButton />
-    <RandomSkyButton />
-    <NearMeButton />
-  </section>
-</transition>
+  <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" aria-label="Show drop-down menu" @click="showDropDown = !showDropDown" />
+  <Transition name="fade" mode="out-in" appear>
+    <section class="drop-down" v-if="showDropDown">
+      <a href="/" class="home-link">Home</a>
+      <CloudsButton />
+      <RandomSkyButton />
+      <NearMeButton />
+    </section>
+  </Transition>
 </template>
 
 <style scoped>
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}.drop-down {
+.drop-down {
   position: absolute;
-  top: 6em;
-  left: 0;
-  width: 12em;
-  height: 20em;
+  top: 1.75em;
+  left: 5em;
+  width: 100vh;
   justify-items: start;
   text-align: start;
 }
-.link-wrapper{
-  margin-bottom: 0.75em;
-}
+
 .home-link {
-  margin: 0.25em 1em;
+  margin: 0.25em 0.5em;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -60,5 +50,4 @@ const showDropDown = ref(false);
 .home-link:focus,
 .home-link:focus-visible {
   outline: 2px auto -webkit-focus-ring-color;
-}
-</style>
+}</style>

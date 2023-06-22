@@ -1,5 +1,6 @@
 <script setup>
 import DropDown from './DropDown.vue';
+import Quotes from './Quotes.vue';
 import { inject } from 'vue';
 const fetchedSkyImage = inject('fetchedSkyImage');
 
@@ -9,8 +10,10 @@ const fetchedSkyImage = inject('fetchedSkyImage');
     <section class="sky">
         <img :src="fetchedSkyImage" class="sky-image"/>
         <DropDown />
-        <button>Music/Sounds</button>
-        <button>Quote if the day</button>
+        <Quotes />
+        <button aria-label="Show sounds options">
+            <img src="/soundsicon.svg" class="sounds-icon" alt="Sounds icon"/>
+        </button>
     </section>
 </template>
 
@@ -23,5 +26,12 @@ const fetchedSkyImage = inject('fetchedSkyImage');
 .sky {
     height: 100vh;
     width: 100vw;
+}
+.sounds-icon{
+  height: 2.5em;
+  padding: em;
+  position: absolute;
+  top: 48%;
+  right: 2em;
 }
 </style>
