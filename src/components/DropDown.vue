@@ -2,9 +2,22 @@
 import RandomSkyButton from './RandomSkyButton.vue';
 import NearMeButton from './NearMeButton.vue';
 import CloudsButton from './CloudsButton.vue';
-import { ref } from 'vue';
+import { ref, provide, onBeforeMount, onMounted } from 'vue';
 
 const showDropDown = ref(false);
+provide('showDropDown', showDropDown);
+
+const handleClickOutside = (event) => {
+  if (showDropDown.value && !event.target.closest('.logo')) {
+showDropDown.value = false;
+  }
+}; 
+onMounted(() => {
+  window.addEventListener('click', handleClickOutside);
+});
+onBeforeMount(() => {
+window.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>

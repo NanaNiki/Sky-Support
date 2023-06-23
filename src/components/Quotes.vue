@@ -1,9 +1,11 @@
 <script setup>
-import { ref, inject } from "vue";
+import { ref, inject, provide, onMounted, onBeforeMount } from "vue";
 import quotesData from "../data/quotesData.json";
 const fetchedSkyImage = inject('fetchedSkyImage');
 const picture = inject('picture');
-const show = ref(false);
+const showQuote = ref(false);
+provide('showQuote', showQuote);
+
 const quote = ref({
     text: '',
     author: ''
@@ -15,14 +17,25 @@ const getRandomQuote = () => {
     quote.value.author = quotesData[randomNumber].author;
 }
 
+const handleClickOutside = (event) => {
+    if (showQuote.value && !event.target.closest('.quotes-icon')) {
+        showQuote.value = false;
+    }
+};
+onMounted(() => {
+    window.addEventListener('click', handleClickOutside);
+});
+onBeforeMount(() => {
+    window.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>
-    <button aria-label="Show random quote" @click="show = !show; getRandomQuote()">
+    <button aria-label="Show random quote" @click="showQuote = !showQuote; getRandomQuote()">
         <img src="/quotesicon.svg" class="quotes-icon" alt="Quotes icon" />
     </button>
     <Transition name="fade" mode="out-in" appear>
-        <div class="quotes-card" v-if="show">
+        <div class="quotes-card" v-if="showQuote">
             <h3 class="quote">{{ quote.text }}</h3>
             <div class="share-quote">
                 <div><a :href="`https://twitter.com/intent/tweet?hashtags=skysupportapp&text=${encodeURIComponent(`&ldquo;${quote.text}&rdquo;\n~&ensp;${quote.author}\n`)}`"
@@ -44,7 +57,7 @@ const getRandomQuote = () => {
 
 <style scoped>
 .share-logo {
-    height: 2.5em;
+    height: 2.25em;
     margin: 0 0.25em;
 }
 
@@ -62,11 +75,17 @@ const getRandomQuote = () => {
 }
 
 .quote {
-    text-align: start;
+    text-align: center;
+    font-size: 1.05em;
+    font-weight: 350;
+    letter-spacing: 0.06em;
 }
 
 .author {
     text-align: end;
+    font-size: 1.05em;
+    font-weight: 350;
+    letter-spacing: 0.06em;
 }
 
 .quotes-icon {
@@ -78,8 +97,8 @@ const getRandomQuote = () => {
 }
 
 .quotes-card {
-    height: 7.5em;
-   min-width: 30em;
+    height: fit-content;
+    width: 30em;
     background-color: #0b073f;
     position: absolute;
     bottom: 1em;
@@ -87,7 +106,5 @@ const getRandomQuote = () => {
     padding: 1em 2em;
     border-radius: 1.5em;
     border: 1px solid #646cff;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-}</style>
+}
+</style>

@@ -47,10 +47,14 @@ const fetchSkyfromInput = () => {
         <NearMeButton />
       </div>
     </div>
+
   </section>
+  <span class="footer">Made with &#129293; by<a href="https://github.com/NanaNiki" target="_blank" aria-label="NanaNiki Github profile"> Nicol</a></span>
 </template>
 
 <style scoped>
+
+
 .start {
   z-index: 10;
   position: relative;
