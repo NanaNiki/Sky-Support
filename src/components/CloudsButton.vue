@@ -3,6 +3,7 @@ import { inject } from 'vue';
 const accessKeyImg = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const fetchedSkyImage = inject('fetchedSkyImage');
 const picture = inject('picture');
+const loading = inject('loading');
 
 const fetchRandomSky = () => {
     fetch(`https://api.unsplash.com/photos/random?collections=8839095&orientation=landscape&count=1&client_id=${accessKeyImg}`)
@@ -12,6 +13,7 @@ const fetchRandomSky = () => {
             picture.value.authorName = photoData[0].user.first_name + " " + photoData[0].user.last_name;
             picture.value.authorProfile  = photoData[0].user.links.html;
             picture.value.pictureLink  = photoData[0].links.html;
+            loading.value = false;
         })
         .catch(error => {
             console.error("Failed to fetch image:", error);

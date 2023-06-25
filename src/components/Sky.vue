@@ -3,13 +3,13 @@ import DropDown from './DropDown.vue';
 import Quotes from './Quotes.vue';
 import Player from './Player.vue';
 import { inject } from 'vue';
-const fetchedSkyImage = inject('fetchedSkyImage');
 const picture = inject('picture');
+const fetchedSkyImage = inject('fetchedSkyImage');
 </script>
 
 <template>
-    <section class="sky" >
-        <img :src="fetchedSkyImage" class="sky-image"/>
+    <section class="sky">
+        <img :src="fetchedSkyImage" class="sky-image" />
         <DropDown />
         <Quotes />
         <Player />
@@ -41,5 +41,4 @@ const picture = inject('picture');
     height: 100vh;
     width: 100vw;
 }
-
 </style>
