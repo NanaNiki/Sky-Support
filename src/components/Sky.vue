@@ -2,14 +2,22 @@
 import DropDown from './DropDown.vue';
 import Quotes from './Quotes.vue';
 import Player from './Player.vue';
-import { inject } from 'vue';
+import Loading from './Loading.vue';
+import { inject, ref } from 'vue';
+
+const loading = ref(true);
 const picture = inject('picture');
 const fetchedSkyImage = inject('fetchedSkyImage');
+
+const onLoad = () => {
+  loading.value = false;
+};
 </script>
 
 <template>
-    <section class="sky">
-        <img :src="fetchedSkyImage" class="sky-image" />
+    <section class="sky"> 
+        <Loading v-if="loading"/>
+        <img :src="fetchedSkyImage" class="sky-image" @load="onLoad"/>
         <DropDown />
         <Quotes />
         <Player />
@@ -18,8 +26,8 @@ const fetchedSkyImage = inject('fetchedSkyImage');
             <a :href="picture.authorProfile" target="_blank"> {{ picture.authorName }} </a>
         </div>
         <span class="footer">Made with &#129293; by<a href="https://github.com/NanaNiki" target="_blank"
-                aria-label="NanaNiki Github profile"> Nicol</a></span>
-    </section>
+                aria-label="NanaNiki Github profile"> Nicol</a></span>         
+    </section> 
 </template>
 
 <style scoped>
@@ -40,5 +48,6 @@ const fetchedSkyImage = inject('fetchedSkyImage');
 .sky {
     height: 100vh;
     width: 100vw;
+    z-index: 10;
 }
 </style>

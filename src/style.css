@@ -41,7 +41,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #0b073f;
+  background-color: #0b0746;
   cursor: pointer;
   transition: border-color 0.25s;
   color: #ffffff;
@@ -62,7 +62,7 @@ button:active {
 
 .logo{
   height: 2.5em;
-  position: absolute;
+  position: fixed;
   top: 2em;
   left: 2em;
 }

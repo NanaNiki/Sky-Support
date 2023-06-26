@@ -20,7 +20,6 @@ const fetchSkyfromInput = () => {
       picture.value.authorProfile = photoData.user.links.html;
       picture.value.pictureLink = photoData.links.html;
       showSkyComponent.value = true;
-      loading.value = false;
     })
     .catch(error => {
       console.error("Failed to fetch image:", error);
@@ -29,13 +28,14 @@ const fetchSkyfromInput = () => {
 </script>
 
 <template>
+  <section class="start">
   <a href="/">
     <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" />
   </a>
   <div class="bg-container"></div>
   <img src="/cloud.svg" class="cloud1" alt="cloud" />
   <img src="/cloud.svg" class="cloud2" alt="cloud" />
-  <section class="start">
+  <div class="start-content">
     <h1>Sky Support</h1>
     <h2>Welcome to Your personal Sky Support</h2>
     <h3>Space where you can get inspiration and enhance your focus</h3>
@@ -48,15 +48,18 @@ const fetchSkyfromInput = () => {
         <NearMeButton />
       </div>
     </div>
-
-  </section>
+  </div>
   <span class="footer">Made with &#129293; by<a href="https://github.com/NanaNiki" target="_blank" aria-label="NanaNiki Github profile"> Nicol</a></span>
-</template>
+</section>
+  </template>
 
 <style scoped>
-
-
-.start {
+.start{
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, black, rgb(2, 2, 71));
+}
+.start-content {
   z-index: 10;
   position: relative;
   margin-top: 4.5em;
@@ -105,7 +108,7 @@ const fetchSkyfromInput = () => {
   border-top-left-radius: 100em;
   border-top-right-radius: 100em;
   filter: drop-shadow(1em 0 5em #051676);
-  opacity: 60%;
+  opacity: 70%;
   position: absolute;
   top: 20em;
   right: 0;
@@ -132,6 +135,7 @@ input {
   background-color: #0b073f;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: #646cff;
 }
 
 input:hover {
