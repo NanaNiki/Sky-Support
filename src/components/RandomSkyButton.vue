@@ -14,6 +14,7 @@ const fetchRandomSky = () => {
             picture.value.authorProfile  = photoData[0].user.links.html;
             picture.value.pictureLink  = photoData[0].links.html;
             showSkyComponent.value = true;
+            console.log('Random sky');
         })
         .catch(error => {
             console.error("Failed to fetch image:", error);

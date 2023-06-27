@@ -3,20 +3,32 @@ import DropDown from './DropDown.vue';
 import Quotes from './Quotes.vue';
 import Player from './Player.vue';
 import Loading from './Loading.vue';
-import { inject, ref } from 'vue';
-
+import { inject, ref, watch } from 'vue';
 const loading = ref(true);
 const picture = inject('picture');
 const fetchedSkyImage = inject('fetchedSkyImage');
+const loadingTimeout = ref(null);
 
 const onLoad = () => {
+    clearTimeout(loadingTimeout.value);
     loading.value = false;
 };
+
+watch(
+    () => fetchedSkyImage.value,
+  (newValue, oldValue) => {
+    loading.value = false; 
+    loadingTimeout.value = setTimeout(() => {
+        loading.value = true;
+    }, 1000)
+   
+  }
+)
 </script>
 
 <template>
     <section class="sky">
-        <Loading v-if="loading" />
+        <Loading v-show="loading" />
         <img :src="fetchedSkyImage" class="sky-image" @load="onLoad" />
         <DropDown />
         <Quotes />
@@ -50,17 +62,19 @@ const onLoad = () => {
 .sky {
     height: 100vh;
     width: 100vw;
-    z-index: 10;
+    z-index: 0;
 }
+
 @media screen and (max-width: 640px) {
-.footer-wrapper{
-    position: absolute;
-    left: 0.2em;
-    bottom: 0;
-    width: fit-content;
-}
-.pic-details{
-    bottom: 0.1em;
-}
+    .footer-wrapper {
+        position: absolute;
+        left: 0.2em;
+        bottom: 0;
+        width: fit-content;
+    }
+
+    .pic-details {
+        bottom: 0.1em;
+    }
 }
 </style>

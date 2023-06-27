@@ -20,6 +20,7 @@ const fetchSkyfromInput = () => {
       picture.value.authorProfile = photoData.user.links.html;
       picture.value.pictureLink = photoData.links.html;
       showSkyComponent.value = true;
+      console.log('Sky of your search');
     })
     .catch(error => {
       console.error("Failed to fetch image:", error);
