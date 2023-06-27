@@ -7,7 +7,7 @@
 .loading-scrn {
   background-image: url('/images/loadingcloud.svg');
   background-repeat: no-repeat;
-  background-size: 20%;
+  background-size: 15%;
   background-position: center;
   animation: loading 2000ms ease-in-out infinite;
   position: fixed;

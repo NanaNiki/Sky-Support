@@ -114,7 +114,7 @@ h1{
 .bg-container {
   height: 40em;
   width: 100vw;
-  background-image: linear-gradient(to bottom, rgba(1, 6, 46, 0.832), rgba(35, 6, 76, 0)), url("/images/bgsky.jpg");
+  background-image: linear-gradient(to bottom, rgba(1, 6, 46, 0.832), rgba(35, 6, 76, 0)), url("/images/bgsky.webp");
   background-repeat: no-repeat;
   background-size: cover;
   border-top-left-radius: 100em;
