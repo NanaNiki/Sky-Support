@@ -5,7 +5,7 @@
 
 <style scoped>
 .loading-scrn {
-  background-image: url('/loadingcloud.svg');
+  background-image: url('/images/loadingcloud.svg');
   background-repeat: no-repeat;
   background-size: 15%;
   background-position: center;

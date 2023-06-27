@@ -21,7 +21,7 @@ window.removeEventListener('click', handleClickOutside);
 </script>
 
 <template>
-  <img src="/skysuplogo.svg" class="logo" aria-label="Show drop-down menu" @click="showDropDown = !showDropDown" />
+  <img src="/images/skysuplogo.svg" class="logo" aria-label="Show drop-down menu" @click="showDropDown = !showDropDown" />
   <Transition name="fade" mode="out-in" appear>
     <section class="drop-down" v-if="showDropDown">
       <a href="/" class="home-link">Home</a>

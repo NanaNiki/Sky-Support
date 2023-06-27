@@ -31,7 +31,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-    <img src="/quotesicon.svg" class="quotes-icon" aria-label="Show random quote"
+    <img src="/images/quotesicon.svg" class="quotes-icon" aria-label="Show random quote"
         @click="showQuote = !showQuote; getRandomQuote()" />
     <Transition name="fade" mode="out-in" appear>
         <div class="quotes-card" v-if="showQuote">
@@ -39,12 +39,12 @@ onBeforeMount(() => {
             <div class="share-quote">
                 <div><a :href="`https://twitter.com/intent/tweet?hashtags=skysupportapp&text=${encodeURIComponent(`&ldquo;${quote.text}&rdquo;\n~&ensp;${quote.author}\n`)}`"
                         target="_blank" class="pin-icon" aria-label="Twitt your qoute">
-                        <img src="src/assets/twitterlogo.png" class="share-logo" alt="Twitter icon" />
+                        <img src="/images/twitterlogo.png" class="share-logo" alt="Twitter icon" />
                     </a>
                     <a :data-pin-do="'embedPin'"
                         :href="`http://pinterest.com/pin/create/button?media=${encodeURIComponent(fetchedSkyImage)}&description=${encodeURIComponent(`&ldquo;${quote.text}&rdquo;\n~ ${quote.author}\nPhoto by ${picture.authorName}.`)}`"
                         className="twit-icon" count-layout="horizontal" target="_blank" aria-label="Pin your qoute">
-                        <img src="src/assets/pinterestlogo.png" class="share-logo" alt="Pinterest icon" />
+                        <img src="/images/pinterestlogo.png" class="share-logo" alt="Pinterest icon" />
                     </a>
                 </div>
                 <h3 class="author">~ {{ quote.author }}</h3>

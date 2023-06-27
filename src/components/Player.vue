@@ -25,12 +25,12 @@ const playAudio = (audioElement) => {
 </script>
 
 <template>
-    <img src="/soundsicon.svg" class="sounds-icon" aria-label="Show sounds options" @click="showPlayer = !showPlayer" />
+    <img src="/images/soundsicon.svg" class="sounds-icon" aria-label="Show sounds options" @click="showPlayer = !showPlayer" />
     <Transition name="fade" mode="out-in" appear>
         <section class="show-player" v-show="showPlayer">
             <button
                 @click="playAudio($event.target.nextElementSibling); console.log(`Ottorino Respighi Violin & Piano | Instrumental Classical Music | Recherge Exciting Focus Mood`)">
-                <img src="/classicicon.svg" class="classic-icon" alt="Classical music icon" />
+                <img src="/images/classicicon.svg" class="classic-icon" alt="Classical music icon" />
                 <audio controls>
                     <source
                         src="https://dl.dropbox.com/s/9n00wvpqr9kycyl/Ottorino%20Respighi%20Violin%20%26%20Piano%20_%20Instrumental%20Classical%20Music%20_%20Recherge%20Exciting%20Focus%20Mood.mp3"
@@ -41,7 +41,7 @@ const playAudio = (audioElement) => {
             </button>
             <button
                 @click="playAudio($event.target.nextElementSibling); console.log('Forest Birdsong - Relaxing Nature Sounds - Birds Chirping - REALTIME - NO LOOP - 2 Hours - HD 1080p')">
-                <img src="/natureicon.svg" class="nature-icon" alt="Nature sounds icon" />
+                <img src="/images/natureicon.svg" class="nature-icon" alt="Nature sounds icon" />
                 <audio
                     src="https://dl.dropbox.com/s/ce8fgl99lisqwyo/Forest%20Birdsong%20-%20Relaxing%20Nature%20Sounds%20-%20Birds%20Chirping%20-%20REALTIME%20-%20NO%20LOOP%20-%202%20Hours%20-%20HD%201080p.mp3"
                     type="audio/mpeg">
@@ -50,7 +50,7 @@ const playAudio = (audioElement) => {
             </button>
             <button
                 @click="playAudio($event.target.nextElementSibling); console.log('Heavy Thunderstorm Sounds | Relaxing Rain, Thunder & Lightning Ambience for Sleep | HD Nature Video')">
-                <img src="/rainicon.svg" class="rain-icon" alt="Rain sounds icon" />
+                <img src="/images/rainicon.svg" class="rain-icon" alt="Rain sounds icon" />
                 <audio
                     src="https://dl.dropbox.com/s/dz9ejr48p6jzvo0/Heavy%20Thunderstorm%20Sounds%20_%20Relaxing%20Rain%2C%20Thunder%20%26%20Lightning%20Ambience%20for%20Sleep%20_%20HD%20Nature%20Video.mp3"
                     type="audio/mpeg">
@@ -59,7 +59,7 @@ const playAudio = (audioElement) => {
             </button>
             <button
                 @click="playAudio($event.target.nextElementSibling); console.log('4 Hours of Asian Mum to Help You Focus on Practising/Studying/Working')">
-                <img src="/houseicon.svg" class="house-icon" alt="Household sounds icon" />
+                <img src="/images/houseicon.svg" class="house-icon" alt="Household sounds icon" />
                 <audio
                     src="https://dl.dropbox.com/s/p2ol8eugdxt9x08/4%20Hours%20of%20Asian%20Mum%20to%20Help%20You%20Focus%20on%20Practising-Studying-Working%20%28mp3cut.net%29.mp3"
                     type="audio/mpeg">
