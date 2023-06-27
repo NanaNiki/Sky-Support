@@ -31,9 +31,8 @@ onBeforeMount(() => {
 </script>
 
 <template>
-    <button aria-label="Show random quote" @click="showQuote = !showQuote; getRandomQuote()">
-        <img src="/quotesicon.svg" class="quotes-icon" alt="Quotes icon" />
-    </button>
+    <img src="/quotesicon.svg" class="quotes-icon" aria-label="Show random quote"
+        @click="showQuote = !showQuote; getRandomQuote()" />
     <Transition name="fade" mode="out-in" appear>
         <div class="quotes-card" v-if="showQuote">
             <h3 class="quote">{{ quote.text }}</h3>
@@ -90,7 +89,6 @@ onBeforeMount(() => {
 
 .quotes-icon {
     height: 2.5em;
-    padding: em;
     position: absolute;
     bottom: 4em;
     left: 2em;
@@ -107,4 +105,32 @@ onBeforeMount(() => {
     border-radius: 1.5em;
     border: 1px solid #646cff;
 }
-</style>
+
+@media screen and (max-width: 640px) {
+    .quotes-icon {
+        bottom: 1.75em;
+        left: 1.25em;
+    }
+
+    .quotes-card {
+        position: absolute;
+        bottom: 5em;
+        left: 1em;
+        width: 85%;
+        padding: 0.75em;
+    }
+
+    .share-quote {
+        min-width: inherit;
+        margin: auto;
+    }
+
+    .quote {
+        font-size: 1em;
+        margin: 0.75em auto;
+    }
+    .author{
+        font-size: 1em;
+        margin: 0.75em 0;
+    }
+}</style>

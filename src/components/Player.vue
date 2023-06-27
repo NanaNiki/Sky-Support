@@ -25,9 +25,7 @@ const playAudio = (audioElement) => {
 </script>
 
 <template>
-    <button aria-label="Show sounds options" @click="showPlayer = !showPlayer">
-        <img src="/soundsicon.svg" class="sounds-icon" alt="Sounds icon" />
-    </button>
+    <img src="/soundsicon.svg" class="sounds-icon" aria-label="Show sounds options" @click="showPlayer = !showPlayer" />
     <Transition name="fade" mode="out-in" appear>
         <section class="show-player" v-show="showPlayer">
             <button
@@ -126,4 +124,11 @@ const playAudio = (audioElement) => {
     position: absolute;
     top: 48.5%;
     right: 2em;
-}</style>
+}
+
+@media screen and (max-width: 640px) {
+    .sounds-icon {
+        right: 1.25em;
+    }
+}
+</style>

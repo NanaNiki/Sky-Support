@@ -49,8 +49,10 @@ const fetchSkyfromInput = () => {
       </div>
     </div>
   </div>
-  <span class="footer">Made with &#129293; by<a href="https://github.com/NanaNiki" target="_blank" aria-label="NanaNiki Github profile"> Nicol</a></span>
-</section>
+  <div class="footer-wrapper">
+    <span class="footer">Made with &#129293; by<a href="https://github.com/NanaNiki" target="_blank" aria-label="NanaNiki Github profile">&nbsp;Nicol</a></span>
+</div>
+  </section>
   </template>
 
 <style scoped>
@@ -58,12 +60,17 @@ const fetchSkyfromInput = () => {
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to bottom, black, rgb(2, 2, 71));
+  display: flex;
+  align-items: center;
 }
 .start-content {
   z-index: 10;
   position: relative;
-  margin-top: 4.5em;
-  width: 100vw;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; 
 }
 
 @keyframes floating {
@@ -147,5 +154,51 @@ input:hover {
   justify-content: space-between;
   margin: auto;
   width: 20em;
+}
+@media screen and (max-width: 640px) {
+ .start-content{
+    padding: 2em;
+  }
+  h2, h3, h5 {
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
+  .cloud1 {
+    display: none;
+  }
+  .cloud2{
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    height: 5em;
+    width: 6em;
+  }
+  input{
+    width: 80%;
+  }
+  .input-buttons-wrapper{
+    margin-top: 0.5em;
+  }
+  .button-wrapper{
+    width: 95%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cloud1 {
+    position: absolute;
+    bottom: 12em;
+    left: 1.5em;
+    rotate: 8deg;
+    height: 8em;
+    width: 12em;
+  }
+  .cloud2{
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    rotate: 8deg;
+    height: 8em;
+    width: 12em;
+  }
 }
 </style>

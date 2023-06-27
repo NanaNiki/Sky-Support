@@ -21,7 +21,7 @@ window.removeEventListener('click', handleClickOutside);
 </script>
 
 <template>
-  <img src="/skysuplogo.svg" class="logo" alt="Sky Support logo" aria-label="Show drop-down menu" @click="showDropDown = !showDropDown" />
+  <img src="/skysuplogo.svg" class="logo" aria-label="Show drop-down menu" @click="showDropDown = !showDropDown" />
   <Transition name="fade" mode="out-in" appear>
     <section class="drop-down" v-if="showDropDown">
       <a href="/" class="home-link">Home</a>
@@ -38,7 +38,7 @@ window.removeEventListener('click', handleClickOutside);
   position: absolute;
   top: 1.75em;
   left: 5em;
-  width: 100vh;
+  width: fit-content;
   justify-items: start;
   text-align: start;
 }
@@ -59,8 +59,21 @@ window.removeEventListener('click', handleClickOutside);
 .home-link:hover {
   border-color: #646cff;
 }
-
 .home-link:focus,
 .home-link:focus-visible {
   outline: 2px auto -webkit-focus-ring-color;
+}
+@media screen and (max-width: 640px) {
+  .drop-down{
+    position: absolute;
+    height: fit-content;
+    top: 4.5em;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .home-link{
+    padding: 0.7em;
+  }
 }</style>

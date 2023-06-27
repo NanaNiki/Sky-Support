@@ -10,7 +10,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  overflow:hidden !important;
+  overflow: hidden !important;
 }
 
 a {
@@ -59,19 +59,23 @@ button:active {
   text-align: center;
 }
 
-
-.logo{
+.logo {
   height: 2.5em;
   position: fixed;
   top: 2em;
   left: 2em;
 }
-.logo:hover, .quotes-icon:hover, .sounds-icon:hover, .classic-icon:hover, .nature-icon:hover, .rain-icon:hover, .house-icon:hover {
+.logo:hover,
+.quotes-icon:hover,
+.sounds-icon:hover,
+.classic-icon:hover,
+.nature-icon:hover,
+.rain-icon:hover,
+.house-icon:hover {
   filter: drop-shadow(0 0 1em #1c03fe);
 }
 
 .fade-enter-active,
-
 .fade-leave-active {
   transition: all 0.8s cubic-bezier(0.5, 0.5, 0.5, 0.5);
 }
@@ -80,12 +84,26 @@ button:active {
 .fade-leave-to {
   opacity: 0;
 }
-
-.footer {
+.footer-wrapper {
   position: absolute;
-  bottom: 0.25em;
-  right: 47%;
+  bottom: 0.05em;
+  width: 100vw;
+}
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-size: 0.5em;
   font-weight: 400;
   letter-spacing: 0.05em;
+}
+@media screen and (max-width: 640px) {
+  button {
+    padding: 0.7em;
+  }
+  .logo{
+    top: 1.5em;
+    left: 1.25em;
+  }
 }
