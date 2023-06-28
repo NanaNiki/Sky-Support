@@ -1,3 +1,6 @@
+/** The code is rendering the Loading component of Sky Support App.
+ * It displays the floating cloud icon on transparent background.
+ */
 <script setup></script>
 <template>
     <div class="loading-scrn"></div>

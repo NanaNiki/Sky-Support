@@ -1,3 +1,8 @@
+/** The code is rendering the Quotes component of Sky Support App, 
+ * with displays a randomly rendered quote and allows user to share
+ * the quote on Twitter or create a pin for Pinterest with fetched 
+ * sky image as pin picture and quote as the description.
+ */
 <script setup>
 import { ref, inject, provide, onMounted, onBeforeMount } from "vue";
 import quotesData from "../data/quotesData.json";

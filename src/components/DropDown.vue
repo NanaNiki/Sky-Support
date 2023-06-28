@@ -1,3 +1,14 @@
+/** The code is rendering the DropDown component of Sky Support App, 
+ * with link to home-page and buttons to re-fetched the desirable sky image.
+ * The buttons are rendered conditionally.
+ * Vue context:
+ * 'onBeforeMount' - lifecycle hook, called right before a component
+ * is mounted into the DOM.
+ * 'onMounted' - lifecycle hook, called after a component 
+ * has been mounted into the DOM.
+ * 'Tansition' - component, allows you to animate elements when 
+ * they are inserted, updated, or removed from the DOM
+ */
 <script setup>
 import RandomSkyButton from './RandomSkyButton.vue';
 import NearMeButton from './NearMeButton.vue';
@@ -7,6 +18,9 @@ import { ref, provide, onBeforeMount, onMounted } from 'vue';
 const showDropDown = ref(false);
 provide('showDropDown', showDropDown);
 
+// Note: The closest method traverses UP the DOM tree 
+// from the target element of an event until it finds 
+// the closest ancestor element that matches the specified selector
 const handleClickOutside = (event) => {
   if (showDropDown.value && !event.target.closest('.logo')) {
 showDropDown.value = false;

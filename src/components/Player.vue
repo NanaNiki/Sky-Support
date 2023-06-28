@@ -1,3 +1,6 @@
+/** The code is rendering the Player component of Sky Support App, 
+ * with plays sounds based on user's preference.
+ */
 <script setup>
 import { ref, onMounted, onBeforeMount } from 'vue';
 const showPlayer = ref(false);

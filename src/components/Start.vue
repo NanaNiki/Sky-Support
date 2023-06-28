@@ -1,3 +1,16 @@
+/** The code is rendering the home page of Sky Support App, with
+ * buttons fetching either random sky image or sky image based on geolocation 
+ * of the user and input field designed to fetch a desirable sky image, based 
+ * on user's input, passed as query. The fetching is utilizing OpenCage and 
+ * Unsplash API key. There is also link to GitHub profile of the author.  
+ * Vue context:
+ * 'inject' - used in the child component to inject data or methods provided 
+ * by its parent component using the 'provide' feature
+ * 'v-model' - directive that enables two-way data binding between form input 
+ * elements and component data (it establishes the value of input, and the 
+ * change of value based on event.target.value)
+ * '@keydown.event' - an event listener in that triggers when a key is pressed down 
+ */
 <script setup>
 import RandomSkyButton from './RandomSkyButton.vue';
 import NearMeButton from './NearMeButton.vue';

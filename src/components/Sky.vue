@@ -1,3 +1,21 @@
+/** The code is rendering the Sky component of Sky Support App, 
+ * with fetched sky image setas background, three buttons displaying 
+ * the drop down menu, player options and quote generator. When rendering
+ * the image exceeds the set time, the loading element is being shown. 
+ * The credits of the rendered picture are displayed in right bottom corner. 
+ * Vue context:
+ * 'watch' - allows to watch for changes in a specific data property or 
+ * computed property and perform actions accordingly, the watch() take two
+ * arguments: I. the func() that returns the value to watch, and II. the 
+ * callback func() that gets executed when the watched value changes
+ * 'v-show' - directive that conditionally shows or hides an element 
+ * based on a given expression
+ * '@load' - event listener that triggers when an element or component 
+ * has finished loading
+ * ':href' or ':src' - shorthand syntax for binding the attribute of an
+ * element or component to a data property or expression, making it 
+ * dynamic and reactive to changes in the data.
+ */
 <script setup>
 import DropDown from './DropDown.vue';
 import Quotes from './Quotes.vue';
@@ -16,13 +34,13 @@ const onLoad = () => {
 
 watch(
     () => fetchedSkyImage.value,
-  (newValue, oldValue) => {
-    loading.value = false; 
-    loadingTimeout.value = setTimeout(() => {
-        loading.value = true;
-    }, 1000)
-   
-  }
+    (newValue, oldValue) => {
+        loading.value = false;
+        loadingTimeout.value = setTimeout(() => {
+            loading.value = true;
+        }, 1000)
+
+    }
 )
 </script>
 

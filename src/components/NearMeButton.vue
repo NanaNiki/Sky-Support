@@ -1,3 +1,9 @@
+/** The code is rendering the NearMeButton component of Sky Support App, 
+ * which fetches the sky image based on user's geoloaction, with use of
+ * OpenCage and Unsplash API key. It also fetches the data of author of 
+ * sky picture: the link to the picture, the author's name and profile 
+ * link on Unsplash.
+ */
 <script setup>
 import { inject } from 'vue';
 const accessKeyImg = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
@@ -18,8 +24,8 @@ const fetchNearMe = () => {
           .then(response => response.json())
           .then(data => {
             console.log(data.results[0].formatted);
-            const country = data.results[0].components.country;
-            const query = `sky-${country}-hd`
+            const userLocation = data.results[0].components.country;
+            const query = `sky-${userLocation}-hd`
             fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKeyImg}`)
               .then(response => response.json())
               .then(photoData => {
@@ -35,7 +41,7 @@ const fetchNearMe = () => {
               });
           })
           .catch(error => {
-            console.error("Failed to retrieve country:", error);
+            console.error("Failed to retrieve you location:", error);
           });
       },
       error => {
