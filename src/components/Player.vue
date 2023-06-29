@@ -1,5 +1,11 @@
 /** The code is rendering the Player component of Sky Support App, 
  * with plays sounds based on user's preference.
+ * Vue context:
+ * 'v-for' - directive used to iterate over an array or an object and 
+ * render a template block for each item, allows to dynamically generate 
+ * content based on the data in component `v-for="item in items"`
+ * 'v-else' - directive used in conjunction with v-if or v-show directives 
+ * to render or display different content based on a condition
  */
 <script setup>
 import { ref } from 'vue';
@@ -53,7 +59,7 @@ const playVideo = (video) => {
                 <template v-else>
                     <button id="play" @click="playVideo(video); console.log(`${video.title}`)">
                         <img :src="`/images/${video.id}icon.svg`" :class="`${video.id}-icon`"
-                            :alt="`${video.id} music icon`" />
+                            :alt="`Play ${video.id} music`" />
                     </button>
                 </template>
                 <iframe v-if="video.playing" ref="youtubePlayer" class="yt-player" :src="video.src"
