@@ -2,96 +2,79 @@
  * with plays sounds based on user's preference.
  */
 <script setup>
-import { ref, onMounted, onBeforeMount } from 'vue';
+import { ref } from 'vue';
 const showPlayer = ref(false);
-
-const handleClickOutside = (event) => {
-    if (showPlayer.value && !event.target.closest('.sounds-icon')) {
-        showPlayer.value = false;
+const videos = ref([
+    {
+        id: 'classic',
+        src: 'https://www.youtube-nocookie.com/embed/_WEQl1QKJn8?&modestbranding=1&rel=0&loop=1&controls=0&autoplay=1',
+        playing: false,
+        title: 'Ottorino Respighi Violin & Piano | Instrumental Classical Music | Recherge Exciting Focus Mood'
+    },
+    {
+        id: 'nature',
+        src: 'https://www.youtube-nocookie.com/embed/Qm846KdZN_c?&modestbranding=1&rel=0&loop=1&controls=0&autoplay=1',
+        playing: false,
+        title: 'Forest Birdsong - Relaxing Nature Sounds - Birds Chirping - REALTIME - NO LOOP - 2 Hours - HD 1080p'
+    },
+    {
+        id: 'rain',
+        src: 'https://www.youtube-nocookie.com/embed/gVKEM4K8J8A?&modestbranding=1&rel=0&loop=1&controls=0&autoplay=1',
+        playing: false,
+        title: 'Heavy Thunderstorm Sounds | Relaxing Rain, Thunder & Lightning Ambience for Sleep | HD Nature Video'
+    },
+    {
+        id: 'house',
+        src: 'https://www.youtube-nocookie.com/embed/3RGEo2Kohb8?&start=207&modestbranding=0&rel=0&loop=1&controls=0&autoplay=1',
+        playing: false,
+        title: '4 Hours of Asian Mum to Help You Focus on Practising/Studying/Working'
     }
-};
-onMounted(() => {
-    window.addEventListener('click', handleClickOutside);
-});
-onBeforeMount(() => {
-    window.removeEventListener('click', handleClickOutside);
-});
+])
 
-const playAudio = (audioElement) => {
-    if (audioElement.paused) {
-        audioElement.play();
-    } else {
-        audioElement.pause();
-    }
+const pauseVideo = (video) => {
+    video.playing = false;
+}
+const playVideo = (video) => {
+    video.playing = true;
 };
-
 </script>
 
 <template>
-    <img src="/images/soundsicon.svg" class="sounds-icon" aria-label="Show sounds options" @click="showPlayer = !showPlayer" />
+    <img src="/images/soundsicon.svg" class="sounds-icon" aria-label="Show sounds options"
+        @click="showPlayer = !showPlayer" />
     <Transition name="fade" mode="out-in" appear>
         <section class="show-player" v-show="showPlayer">
-            <button
-                @click="playAudio($event.target.nextElementSibling); console.log(`Ottorino Respighi Violin & Piano | Instrumental Classical Music | Recherge Exciting Focus Mood`)">
-                <img src="/images/classicicon.svg" class="classic-icon" alt="Classical music icon" />
-                <audio controls>
-                    <source
-                        src="https://dl.dropbox.com/s/9n00wvpqr9kycyl/Ottorino%20Respighi%20Violin%20%26%20Piano%20_%20Instrumental%20Classical%20Music%20_%20Recherge%20Exciting%20Focus%20Mood.mp3"
-                        type="audio/mpeg">
-                    Your browser does not support the audio element.
-
-                </audio>
-            </button>
-            <button
-                @click="playAudio($event.target.nextElementSibling); console.log('Forest Birdsong - Relaxing Nature Sounds - Birds Chirping - REALTIME - NO LOOP - 2 Hours - HD 1080p')">
-                <img src="/images/natureicon.svg" class="nature-icon" alt="Nature sounds icon" />
-                <audio
-                    src="https://dl.dropbox.com/s/ce8fgl99lisqwyo/Forest%20Birdsong%20-%20Relaxing%20Nature%20Sounds%20-%20Birds%20Chirping%20-%20REALTIME%20-%20NO%20LOOP%20-%202%20Hours%20-%20HD%201080p.mp3"
-                    type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </button>
-            <button
-                @click="playAudio($event.target.nextElementSibling); console.log('Heavy Thunderstorm Sounds | Relaxing Rain, Thunder & Lightning Ambience for Sleep | HD Nature Video')">
-                <img src="/images/rainicon.svg" class="rain-icon" alt="Rain sounds icon" />
-                <audio
-                    src="https://dl.dropbox.com/s/dz9ejr48p6jzvo0/Heavy%20Thunderstorm%20Sounds%20_%20Relaxing%20Rain%2C%20Thunder%20%26%20Lightning%20Ambience%20for%20Sleep%20_%20HD%20Nature%20Video.mp3"
-                    type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </button>
-            <button
-                @click="playAudio($event.target.nextElementSibling); console.log('4 Hours of Asian Mum to Help You Focus on Practising/Studying/Working')">
-                <img src="/images/houseicon.svg" class="house-icon" alt="Household sounds icon" />
-                <audio
-                    src="https://dl.dropbox.com/s/p2ol8eugdxt9x08/4%20Hours%20of%20Asian%20Mum%20to%20Help%20You%20Focus%20on%20Practising-Studying-Working%20%28mp3cut.net%29.mp3"
-                    type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </button>
+            <div v-for="video in videos" :key="video.id">
+                <template v-if="video.playing">
+                    <button id="pause" @click="pauseVideo(video)">
+                        <img src="/images/stopicon.svg" :class="`${video.id}-icon`" />
+                    </button>
+                </template>
+                <template v-else>
+                    <button id="play" @click="playVideo(video); console.log(`${video.title}`)">
+                        <img :src="`/images/${video.id}icon.svg`" :class="`${video.id}-icon`"
+                            :alt="`${video.id} music icon`" />
+                    </button>
+                </template>
+                <iframe v-if="video.playing" ref="youtubePlayer" class="yt-player" :src="video.src"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
         </section>
     </Transition>
 </template>
 
 <style scoped>
-.youtube {
+.yt-player {
     position: absolute;
-    bottom: 1em;
-    right: 0em;
-    width: 20%;
-    height: 20%;
+    top: 0.5em;
+    right: 0.5em;
+    width: 200px;
+    height: 200px;
     border-radius: 2em;
     border-color: #646cff;
-}
-
-.spotify {
-    position: absolute;
-    top: 0.25em;
-    right: 0em;
-    width: 22%;
-    height: 10%;
-    border-radius: 2em;
-    border-color: #646cff;
+    opacity: 70%;
 }
 
 .house-icon {
