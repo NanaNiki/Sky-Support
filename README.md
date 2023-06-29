@@ -7,7 +7,7 @@
    <li><b><i>Greek Philosophical Wisdom</i></b> 🏺 Explore random quotes from Greek philosophers to find inspiration and share them on social media platforms like Twitter or Pinterest.</li>
    <li><b><i>Soothing Sounds</i></b> 🎵 Enhance your focus and create a serene atmosphere with calming sounds such as thunderstorms, chirping birds, classical music, or household sounds.</li>
 </ul>
- <h3>🌌 Visit the <a href="https://skysupport.netlify.app/">Sky Support</a> to experience the beauty of the sky and find inspiration for your day 🌌 </h3>
+ <h3>Visit <a href="https://skysupport.netlify.app/">Sky Support</a> to experience the beauty of the sky and find inspiration for your day 🌌 </h3>
 
 <h3>Technologies Used</h3>
 <ul>
